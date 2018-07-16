@@ -1,74 +1,62 @@
 <html><head>
 <title>JAM.S Template Generator</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="http://cdn.muicss.com/mui-0.9.27/css/mui.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.muicss.com/mui-0.9.27/css/mui.min.css" rel="stylesheet" type="text/css">
 
-<script>
-function replaceWords() {
-	coverart = $('input[name="coverart"]').val()
-	$(".coverart").html(coverart)
-	rd = $('input[name="rd"]').val()
-	$(".rd").html(rd)
-	genre = $('input[name="genre"]').val()
-	quality = $('input[name="quality"]').val()
-	$(".quality").html(quality)
-	$(".genre").html(genre)
-	notes = $('input[name="notes"]').val()
-	$(".notes").html(notes)
-	track1 = $('input[name="track1"]').val()
-	$(".track1").html(track1)
-  track2 = $('input[name="track2"]').val()
-	$(".track2").html(track2)
-  track3 = $('input[name="track3"]').val()
-  $(".track3").html(track3)
-  track4 = $('input[name="track4"]').val()
-  $(".track4").html(track4)
-  track5 = $('input[name="track5"]').val()
-  $(".track5").html(track5)
-  track6 = $('input[name="track6"]').val()
-  $(".track6").html(track6)
-  track7 = $('input[name="track7"]').val()
-  $(".track7").html(track7)
-  track8 = $('input[name="track8"]').val()
-  $(".track8").html(track8)
-  track9 = $('input[name="track9"]').val()
-  $(".track9").html(track9)
-  track10 = $('input[name="track10"]').val()
-  $(".track10").html(track10)
-  track11 = $('input[name="track11"]').val()
-  $(".track11").html(track11)
-  track12 = $('input[name="track12"]').val()
-  $(".track12").html(track12)
-  track13 = $('input[name="track13"]').val()
-  $(".track13").html(track13)
-  track14 = $('input[name="track14"]').val()
-  $(".track14").html(track14)
-  track15 = $('input[name="track15"]').val()
-  $(".track15").html(track15)
-  track16 = $('input[name="track16"]').val()
-  $(".track16").html(track16)
-  track17 = $('input[name="track17"]').val()
-  $(".track17").html(track17)
-  track18 = $('input[name="track18"]').val()
-  $(".track18").html(track18)
-  track19 = $('input[name="track19"]').val()
-  $(".track19").html(track19)
-  track20 = $('input[name="track20"]').val()
-  $(".track20").html(track20)
-	dllink = $('input[name="dllink"]').val()
-	$(".dllink").html(dllink)
-	stream = $('input[name="stream"]').val()
-	$(".stream").html(stream)
-}
-</script>
+
 <style>
+body {
+	color: #98999a !important;
+	background: #282929;
+}
+
+.mui-panel {
+	box-shadow: 0 10px 20px 0 rgba(40, 41, 41, 0.85),0 0 2px 0 rgba(0,0,0,.12) !important;
+}
+
+.mui-container {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: none;
+  margin: 0 110px; 
+  background: #282929;
+  background-color: rgba(40, 41, 41, 0.85); 
+}
+
 span {
-background-color: yellow;
+background-color: rgba(195, 36, 37, 0.50);
+}
+
+#tracklist {
+background-color: rgba(195, 36, 37, 0.50);
+}
+
+html, body {
+	background-size: cover;
+    background-position: center center;
+    background-image: url("https://www.justanothermusic.site/forum/ext/alex75/background/styles/prosilver/theme/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	margin-top: -8px;
+}
+
+.mui-panel {
+	background-color: #282929 !important;
+}
+
+button,input,optgroup,select,textarea {
+	background-color: #353536 !important;
+	input: background: #353536 !important; border-color: #282929 !important;
+	color: #98999a !important;
 }
 </style>
 </head>
 <body>
-<div class="mui-container" style="margin-top: 20px">
+<div id="wrap" class="page-width">
+<div class="mui-container" style="margin-top: 0px">
 
       <div class="mui-panel">
 
@@ -76,57 +64,48 @@ background-color: yellow;
   <h3>This is still a wip so it's not perfect yet.</h3>
   <h3>Remove any unnecessary fields if they are unused.</h3>
 
-  Cover Art Direct Link (MINIMUM 500X500 OR AIIR WILL GET MAD!!!):<br>
-  <input type="text" name="coverart" value="https://t7.rbxcdn.com/66af227d2322440f82a557b3bafc8176">
-  <br>
-  Release Date:<br>
-  <input type="text" name="rd" value="February 31, 2018">
-  <br>
-  Genre:<br>
-  <input type="text" name="genre" value="Christian Server Music">
-  <br>
-  Quality:<br>
-  <input type="text" name="quality" value="MP2 8kbps / ALAChu akbar">
-  <br>
-  Notes (optional, remove section if none):<br>
-  <input type="text" name="notes" value="Found this hot ass fire mixtape in the dumpster of MacDonalds xDDDDD">
-  <br>
-  Tracklisting:<br>
-  1. <input type="text" name="track1" value=""><br>
-  2. <input type="text" name="track2" value=""><br>
-  3. <input type="text" name="track3" value=""><br>
-  4. <input type="text" name="track4" value=""><br>
-  5. <input type="text" name="track5" value=""><br>
-  6. <input type="text" name="track6" value=""><br>
-  7. <input type="text" name="track7" value=""><br>
-  8. <input type="text" name="track8" value=""><br>
-  9. <input type="text" name="track9" value=""><br>
-  10. <input type="text" name="track10" value=""><br>
-  11. <input type="text" name="track11" value=""><br>
-  12. <input type="text" name="track12" value=""><br>
-  13. <input type="text" name="track13" value=""><br>
-  14. <input type="text" name="track14" value=""><br>
-  15. <input type="text" name="track15" value=""><br>
-  16. <input type="text" name="track16" value=""><br>
-  17. <input type="text" name="track17" value=""><br>
-  18. <input type="text" name="track18" value=""><br>
-  19. <input type="text" name="track19" value=""><br>
-  20. <input type="text" name="track20" value=""><br>
-  <br>
-  Download Link(s):<br>
-  <input type="text" name="dllink" value="https://example.com">
-  <br>
-  Stream (optional, if any):<br>
-  <input type="text" name="stream" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-  <br><br>
-  <input type="submit" onclick="replaceWords()" value="Submit">
+Cover Art Direct Link (Minimum of 500x500):<br>
+<input type="text" name="coverart" value="https://t7.rbxcdn.com/66af227d2322440f82a557b3bafc8176">
+<br><br>
+Release Date:<br>
+<input type="text" name="rd" value="February 31, 2018">
+<br><br>
+Genre:<br>
+<input type="text" name="genre" value="Alternative, Pop">
+<br><br>
+Quality:<br>
+<input type="text" name="quality" value="MP3 320kbps / FLAC">
+<br><br>
+Notes (optional, remove section if none):<br>
+<input type="text" name="notes" value="Found this hot ass fire mixtape in the dumpster of MacDonalds xDDDDD">
+<br><br>
+Tracklist (Include "#." in input):
+<br>01. <input id="track01" type="text">
+<br>02. <input id="track02" type="text">
+<br>03. <input id="track03" type="text">
+<br>04. <input id="track04" type="text">
+<br>05. <input id="track05" type="text">
+<br>06. <input id="track06" type="text">
+<br>07. <input id="track07" type="text">
+<br>08. <input id="track08" type="text">
+<br>09. <input id="track09" type="text">
+<br>10. <input id="track10" type="text">
+<br>If there is more than 10, submit the first 10,<br> and then treat the next 10 as 11-20. <br>Continue until you get all of the tracks you need.
+<br><br>
+Download Link(s):<br>
+<input type="text" name="dllink" value="https://example.com">
+<br><br>
+Stream (optional, if any):<br>
+<input type="text" name="stream" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<br><br>
+<input type="submit" onclick="clickEvent()" value="Generate">
 </div>
-<h1>Copy the code below:</h1>
-      <div class="mui-panel">
+<h1 style="padding-left: 5px;">Copy the code below:</h1>
+<div class="mui-panel">
 
 
-<codeblock>
- [center]<br>
+
+[center]<br>
 [CoverArt]<span class="coverart">https://t7.rbxcdn.com/66af227d2322440f82a557b3bafc8176</span>[/CoverArt]<br>
 [b]Release Date:[/b] <span class="rd">February 31, 2018</span><br>
 [b]Genre:[/b] <span class="genre">Christian Server Music</span><br>
@@ -139,26 +118,7 @@ background-color: yellow;
 <br>
 [b]Tracklist[/b]<br>
 -----------------------------------<br>
-1. <span class="track1">Hairysmellypubes</span><br>
-2. <span class="track2">Fucked off</span><br>
-3. <span class="track3">Ride ( ͡° ͜ʖ ͡°)</span><br>
-4. <span class="track4">My Dad Left Me At Yesterday At 4:00AM!</span><br>
-5. <span class="track5">(Fuck A) Body Pillow</span><br>
-6. <span class="track6">Say Goodbye (To Your Mother)</span><br>
-7. <span class="track7">The Family Disappointment Failed Abortion</span><br>
-8. <span class="track8"></span><br>
-9. <span class="track9"></span><br>
-10.<span class="track10"></span><br>
-11. <span class="track11"></span><br>
-12. <span class="track12"></span><br>
-13. <span class="track13"></span><br>
-14. <span class="track14"></span><br>
-15. <span class="track15"></span><br>
-16. <span class="track16"></span><br>
-17. <span class="track17"></span><br>
-18. <span class="track18"></span><br>
-19. <span class="track19"></span><br>
-20. <span class="track20"></span><br>
+<div id="tracklist"></div>
 -----------------------------------<br>
 <br>
 Download links<br>
@@ -169,6 +129,77 @@ Download links<br>
 <span class="stream">https://www.youtube.com/watch?v=dQw4w9WgXcQ</span><br>
 <br>
 [/center]<br>
-</codeblock>
+
  </div>
-</div></body></html>
+</div>
+</div>
+<script>
+function replaceWords() {
+	coverart = $('input[name="coverart"]').val()
+	$(".coverart").html(coverart)
+	rd = $('input[name="rd"]').val()
+	$(".rd").html(rd)
+	genre = $('input[name="genre"]').val()
+	quality = $('input[name="quality"]').val()
+	$(".quality").html(quality)
+	$(".genre").html(genre)
+	notes = $('input[name="notes"]').val()
+	$(".notes").html(notes)
+	dllink = $('input[name="dllink"]').val()
+	$(".dllink").html(dllink)
+	stream = $('input[name="stream"]').val()
+	$(".stream").html(stream)
+}
+
+var list = document.getElementById('tracklist');
+
+function changeTrack() {
+    var track01 = document.getElementById('track01').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track01));
+    list.appendChild(entry);
+	var track02 = document.getElementById('track02').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track02));
+    list.appendChild(entry);
+    var track03 = document.getElementById('track03').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track03));
+    list.appendChild(entry);
+	var track04 = document.getElementById('track04').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track04));
+    list.appendChild(entry);
+    var track05 = document.getElementById('track05').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track05));
+    list.appendChild(entry);
+	var track06 = document.getElementById('track06').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track06));
+    list.appendChild(entry);
+    var track07 = document.getElementById('track07').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track07));
+    list.appendChild(entry);
+	var track08 = document.getElementById('track08').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track08));
+    list.appendChild(entry);
+    var track09 = document.getElementById('track09').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track09));
+    list.appendChild(entry);
+	var track10 = document.getElementById('track10').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track10));
+    list.appendChild(entry);
+}
+
+function clickEvent(){
+    replaceWords();
+    changeTrack();
+}
+</script>
+</body>
+</html>
