@@ -61,11 +61,11 @@ button,input,optgroup,select,textarea {
       <div class="mui-panel">
 
   <h1>JAM.S Template Generator</h1>
-  <h3>This is still a wip so it's not perfect yet.</h3>
-  <h3>Remove any unnecessary fields if they are unused.</h3>
+  <h3>This is still a WIP, so it's not perfect yet.</h3>
+  <h3>Remove any unnecessary fields from your paste if they are unused.</h3>
 
 Cover Art Direct Link (Minimum of 500x500):<br>
-<input type="text" name="coverart" value="https://t7.rbxcdn.com/66af227d2322440f82a557b3bafc8176">
+<input type="text" name="coverart" value="https://www.justanothermusic.site/forum/styles/digi_red/theme/images/logo.png">
 <br><br>
 Release Date:<br>
 <input type="text" name="rd" value="February 31, 2018">
@@ -73,11 +73,8 @@ Release Date:<br>
 Genre:<br>
 <input type="text" name="genre" value="Alternative, Pop">
 <br><br>
-Quality:<br>
-<input type="text" name="quality" value="MP3 320kbps / FLAC">
-<br><br>
 Notes (optional, remove section if none):<br>
-<input type="text" name="notes" value="Found this hot ass fire mixtape in the dumpster of MacDonalds xDDDDD">
+<input type="text" name="notes" value="REMOVE IF UNUSED!">
 <br><br>
 Tracklist (Include "#." in input):
 <br>01. <input id="track01" type="text">
@@ -90,10 +87,63 @@ Tracklist (Include "#." in input):
 <br>08. <input id="track08" type="text">
 <br>09. <input id="track09" type="text">
 <br>10. <input id="track10" type="text">
-<br>If there is more than 10, submit the first 10,<br> and then treat the next 10 as 11-20. <br>Continue until you get all of the tracks you need.
+<br>11. <input id="track11" type="text">
+<br>12. <input id="track12" type="text">
+<br>13. <input id="track13" type="text">
+<br>14. <input id="track14" type="text">
+<br>15. <input id="track15" type="text">
+<br>16. <input id="track16" type="text">
+<br>17. <input id="track17" type="text">
+<br>18. <input id="track18" type="text">
+<br>19. <input id="track19" type="text">
+<br>20. <input id="track20" type="text">
+<br>If you need to add more, add them manually when you paste the copy below.
 <br><br>
-Download Link(s):<br>
+Quality:<br>
+FORMAT / BITRATE / SOURCE OF FILES<br>
+<select type="text" id="quality1" onchange="changeSelect1()">
+  <option value="format">Format</option>
+  <option value="none1">---</option>
+  <option value="mp3">MP3</option>
+  <option value="aac">AAC</option>
+  <option value="flac">FLAC</option>
+  <option value="wav">WAV</option>
+  <option value="alac">ALAC</option>
+  <option value="iso">ISO</option>
+  <option value="mp4">MP4</option>
+  <option value="mkv">MKV</option>
+  <option value="other1">Other</option>
+</select>
+<select type="text" id="quality2" onchange="changeSelect2()">
+  <option value="bitrate">Bitrate</option>
+  <option value="none2">---</option>
+  <option value="128kbps">128kbps</option>
+  <option value="160kbps">160kbps</option>
+  <option value="192kbps">192kbps</option>
+  <option value="256kbps">256kbps</option>
+  <option value="320kbps">320kbps</option>
+  <option value="lossless">Lossless</option>
+  <option value="video">Video</option>
+  <option value="other2">Other</option>
+</select>
+<select type="text" id="quality3" onchange="changeSelect3()">
+  <option value="source">Source</option>
+  <option value="none3">---</option>
+  <option value="cd">CD</option>
+  <option value="web">Web</option>
+  <option value="vinyl">Vinyl</option>
+  <option value="cassette">Cassette</option>
+  <option value="radio">Radio</option>
+  <option value="dvd">DVD</option>
+  <option value="bluray">BluRay</option>
+  <option value="other3">Other</option>
+</select>
+<br><br>
+Download Link for specified quality:<br>
 <input type="text" name="dllink" value="https://example.com">
+<br><br>
+Your JAM.S Username:<br>
+<input type="text" name="user" value="JAM.S-chan">
 <br><br>
 Stream (optional, if any):<br>
 <input type="text" name="stream" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
@@ -106,24 +156,28 @@ Stream (optional, if any):<br>
 
 
 [center]<br>
-[CoverArt]<span class="coverart">https://t7.rbxcdn.com/66af227d2322440f82a557b3bafc8176</span>[/CoverArt]<br>
+[CoverArt]<span class="coverart">https://www.justanothermusic.site/forum/styles/digi_red/theme/images/logo.png</span>[/CoverArt]<br>
 [b]Release Date:[/b] <span class="rd">February 31, 2018</span><br>
-[b]Genre:[/b] <span class="genre">Christian Server Music</span><br>
-[b]Quality:[/b] <span class="quality">MP2 8kbps / ALAChu akbar</span><br>
+[b]Genre:[/b] <span class="genre">Alternative, Pop</span><br>
 <br>
-[b]Notes[/b]<br>
+[b]NOTES[/b]<br>
 -----------------------------------<br>
-<span class="notes">Remove this section if no notes are required</span><br>
+<span class="notes">REMOVE IF UNUSED!</span><br>
 -----------------------------------<br>
 <br>
-[b]Tracklist[/b]<br>
+[b]TRACKLIST[/b]<br>
 -----------------------------------<br>
 <div id="tracklist"></div>
 -----------------------------------<br>
 <br>
-Download links<br>
+[b]DOWNLOADS[/b]<br>
 -----------------------------------<br>
-[b][color=#FF4040][url]<span class="dllink">https://example.com</span>[/url][/color][/b]<br>
+[format=<span id="quality1text">Format</span> / <span id="quality2text">Bitrate</span> / <span id="quality3text">Source</span>]<br>
+Uploaded by [user]<span class="user">JAM.S-chan</span>[/user]<br>
+<br>
+DOWNLOAD<br>
+<span class="dllink">https://example.com</span><br>
+[/format]<br>
 -----------------------------------<br>
 <br>
 <span class="stream">https://www.youtube.com/watch?v=dQw4w9WgXcQ</span><br>
@@ -147,6 +201,8 @@ function replaceWords() {
 	$(".notes").html(notes)
 	dllink = $('input[name="dllink"]').val()
 	$(".dllink").html(dllink)
+	user = $('input[name="user"]').val()
+	$(".user").html(user)
 	stream = $('input[name="stream"]').val()
 	$(".stream").html(stream)
 }
@@ -194,6 +250,108 @@ function changeTrack() {
     var entry = document.createElement('div');
     entry.appendChild(document.createTextNode(track10));
     list.appendChild(entry);
+    var track01 = document.getElementById('track11').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track01));
+    list.appendChild(entry);
+	var track02 = document.getElementById('track12').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track02));
+    list.appendChild(entry);
+    var track03 = document.getElementById('track13').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track03));
+    list.appendChild(entry);
+	var track04 = document.getElementById('track14').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track04));
+    list.appendChild(entry);
+    var track05 = document.getElementById('track15').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track05));
+    list.appendChild(entry);
+	var track06 = document.getElementById('track16').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track06));
+    list.appendChild(entry);
+    var track07 = document.getElementById('track17').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track07));
+    list.appendChild(entry);
+	var track08 = document.getElementById('track18').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track08));
+    list.appendChild(entry);
+    var track09 = document.getElementById('track19').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track09));
+    list.appendChild(entry);
+	var track10 = document.getElementById('track20').value;
+    var entry = document.createElement('div');
+    entry.appendChild(document.createTextNode(track10));
+    list.appendChild(entry);
+}
+
+function changeSelect1() {
+    if (document.getElementById("quality1").value == "mp3") {
+        document.getElementById("quality1text").innerHTML = "MP3";
+    } else if (document.getElementById("quality1").value == "aac") {
+        document.getElementById("quality1text").innerHTML = "AAC";
+    } else if (document.getElementById("quality1").value == "flac") {
+        document.getElementById("quality1text").innerHTML = "FLAC";
+    } else if (document.getElementById("quality1").value == "wav") {
+        document.getElementById("quality1text").innerHTML = "WAV";
+    } else if (document.getElementById("quality1").value == "alac") {
+        document.getElementById("quality1text").innerHTML = "ALAC";
+    } else if (document.getElementById("quality1").value == "iso") {
+        document.getElementById("quality1text").innerHTML = "ISO";
+    } else if (document.getElementById("quality1").value == "mp4") {
+        document.getElementById("quality1text").innerHTML = "MP4";
+    } else if (document.getElementById("quality1").value == "mkv") {
+        document.getElementById("quality1text").innerHTML = "MKV";
+    } else if (document.getElementById("quality1").value == "other1") {
+        document.getElementById("quality1text").innerHTML = "Other (Change this)";
+    }
+}
+
+function changeSelect2() {
+    if (document.getElementById("quality2").value == "128kbps") {
+        document.getElementById("quality2text").innerHTML = "128";
+    } else if (document.getElementById("quality2").value == "160kbps") {
+        document.getElementById("quality2text").innerHTML = "160";
+    } else if (document.getElementById("quality2").value == "192kbps") {
+        document.getElementById("quality2text").innerHTML = "192";
+    } else if (document.getElementById("quality2").value == "256kbps") {
+        document.getElementById("quality2text").innerHTML = "256";
+    } else if (document.getElementById("quality2").value == "320kbps") {
+        document.getElementById("quality2text").innerHTML = "320";
+    } else if (document.getElementById("quality2").value == "lossless") {
+        document.getElementById("quality2text").innerHTML = "Lossless";
+    } else if (document.getElementById("quality2").value == "video") {
+        document.getElementById("quality2text").innerHTML = "Video";
+    } else if (document.getElementById("quality2").value == "other2") {
+        document.getElementById("quality2text").innerHTML = "Other (Change this)";
+    }
+}
+
+function changeSelect3() {
+    if (document.getElementById("quality3").value == "cd") {
+        document.getElementById("quality3text").innerHTML = "CD";
+    } else if (document.getElementById("quality3").value == "web") {
+        document.getElementById("quality3text").innerHTML = "WEB";
+    } else if (document.getElementById("quality3").value == "vinyl") {
+        document.getElementById("quality3text").innerHTML = "Vinyl";
+    } else if (document.getElementById("quality3").value == "cassette") {
+        document.getElementById("quality3text").innerHTML = "Cassette";
+    } else if (document.getElementById("quality3").value == "radio") {
+        document.getElementById("quality3text").innerHTML = "Radio";
+    } else if (document.getElementById("quality3").value == "dvd") {
+        document.getElementById("quality3text").innerHTML = "DVD";
+    } else if (document.getElementById("quality3").value == "bluray") {
+        document.getElementById("quality3text").innerHTML = "BluRay";
+    } else if (document.getElementById("quality3").value == "other3") {
+        document.getElementById("quality3text").innerHTML = "Other (Change this)";
+    }
 }
 
 function clickEvent(){
